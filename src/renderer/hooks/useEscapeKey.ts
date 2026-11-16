@@ -1,0 +1,12 @@
+import { useEffect } from 'react';
+
+/** Closes an overlay when the user presses Escape. */
+export function useEscapeKey(onEscape: () => void): void {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onEscape();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [onEscape]);
+}

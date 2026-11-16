@@ -1,0 +1,31 @@
+node_modules/
+dist/
+*.db
+*.db-journal
+%APPDATA%/Aura/
+
+# Local environment and secret material
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.p12
+*.key
+*.cert
+*.crt
+*.cer
+*.jks
+*.keystore
+*.mobileprovision
+*.token
+*.secret
+secrets.*
+credentials.*
+
+# Azure/local tool state
+.azure/
+.azd/
+
+# Agent tooling scratch output (may capture internal pages)
+.playwright-mcp/
